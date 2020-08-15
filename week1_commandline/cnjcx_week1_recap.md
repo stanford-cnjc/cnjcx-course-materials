@@ -380,4 +380,4 @@ processes, including training deep neural networks.
 
 [sherlocklink]: https://www.sherlock.stanford.edu/docs/overview/introduction/
 [cnjcxlink]: https://stanford-cnjc.github.io/#/CNJCx
-[hblnik]: https://brew.sh/
+[hblink]: https://brew.sh/
