@@ -252,7 +252,7 @@ will make you a more powerful python developer. These tools are part of our
 bread 'n butter. We will discuss how to effectively multitask within the
 terminal, we will find the text editor that suits your needs (with special
 attention to our favorite), and if we have time, we will show you how to
-connect to a remote machine! 
+connect to a remote machine[<sup>1</sup>](#footnote1)<a name="returnfootnote1"></a>!
 
 **In order to get the most out of our time together there are two orders of 
 business.** (1) There is some software that you need. (2) We have a couple files 
@@ -365,4 +365,18 @@ Yes, you probably just don't have any non-hidden files in your home directory ye
 ### When do I need to use `echo`? 
 Many commands output text to the standard output (the terminal window) by default. For example, `pwd` print the absolute path of the current working directory to the terminal. If you want to print a message yourself, however, you can use `echo "my message"` to print the message, or `echo "my message" > my_file.txt` to redirect the printing of the message to a file instead of the terminal window.
 
+-------------
+
+[<sup>1</sup>](#returnfootnote1)<a name="footnote1"></a>  Remote machines, machines that you
+_connect to_ rather than _sit at_, are becoming more common as demands for
+computing and storage resources grow. These machines are often dedicated
+_compute machines_ specialized for the heavy computational loads required when
+performing advanced analysis or working with large datasets. While these
+machines are much more powerful than a laptop, they often lack graphical
+interfaces, requiring users to interact over the command line to take
+advantage of the compute power. One example is the [Sherlock
+cluster][sherlocklink] which allows users to run computationally expensive
+processes, including training deep neural networks.
+
+[sherlocklink]: https://www.sherlock.stanford.edu/docs/overview/introduction/
 [cnjcxlink]: https://stanford-cnjc.github.io/#/CNJCx
