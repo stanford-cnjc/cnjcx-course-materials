@@ -249,10 +249,10 @@ $ lrt
 ## Preparation for Next Session<a name="nextsesh"></a>
 In next week's session we are going to share some of the tools that we believe
 will make you a more powerful python developer. These tools are part of our
-bread 'n butter. We will discuss how to effectively multitask within the
+bread 'n butter. <a name="returnfootnote1"></a> We will discuss how to effectively multitask within the
 terminal, we will find the text editor that suits your needs (with special
 attention to our favorite), and if we have time, we will show you how to
-connect to a remote machine[<sup>1</sup>](#footnote1)<a name="returnfootnote1"></a>!
+connect to a remote machine[<sup>1</sup>](#footnote1)!
 
 **In order to get the most out of our time together there are two orders of 
 business.** (1) There is some software that you need. (2) We have a couple files 
