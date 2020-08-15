@@ -1,0 +1,55 @@
+" vvvvvvvvvvvvv           vvvvvvvvvvvvvvvv
+"              TGF - VIMRC
+"   (lots borrowed from Bram Moolenaar)
+" vvvvvvvvvvvvv           vvvvvvvvvvvvvvvv
+" USAGE TRICK: ln to this file on the home directory to establish this .vimrc
+"
+" this goes first, we don't care about vi settings
+set nocompatible
+
+" Nice formatting stuff
+set tabstop=4 "how many columns is a tab
+set shiftwidth=4 "how large is indentation
+set softtabstop=4 "how much white space added by 'tab' and removed by 'backspace'
+set expandtab "makes a 'tab' a set of spaces  that is TABSTOP in length
+set autoindent "will keep you indented NOTE: also try smartindent if you like
+
+" User interface stuff
+"set history=50 "save vim command history
+set ruler "always show my cursor
+set showcmd "display incomplete commands
+set incsearch "when you are searching highlighting starts before you hit <enter>
+set backspace=indent,eol,start "more intuitive backspace settings
+set number "show line numbers
+set colorcolumn=80 "page width line, keeps you from typing way off the page which is pretty inconvenient because it just wraps around and is hard to read.
+if has('mouse') "if we have a mouse, use it
+    set mouse=a
+endif
+
+if &t_Co > 2 || has("gui_running") "highlight syntax
+    syntax on
+    set t_Co=256
+    set hlsearch
+endif
+
+" Get the pesky extra files organized
+" ~/.vimtmp WILL NOT be made automatically, user must: mkdir ~/.vimtmp
+""if has("vms") "don't worry abou this
+""    set nobackup "do not keep a backup file, use versions instead
+""else
+""    set backup "keep a backup file (restore to previous version)
+""    set backupdir=.backup/,~/.backup/,~/.vimtmp//
+""    set directory=.swp/,~/.swp/,~/.vimtmp//
+""    set undodir=.undo/,~/.undo/,~/.vimtmp//
+""    set undofile "keep an undo file (undo changes after closing)
+""endif
+
+" Beautiful statusline
+set laststatus=2 "I like the status line, don't ever let it go away
+""set statusline=%f "example simple statusline
+set statusline=%f%m%r%h%w\ [%Y]\ [0x%02.2B]%<\ %F%=%4v,%4l\ %3p%%\ of\ %L\ \  "complex_(nicer) statusline
+
+hi StatusLine ctermbg=none ctermfg=none cterm=bold "subdued color settings for statusline
+hi StatusLineNC ctermbg=none ctermfg=0 cterm=bold "subdued color settings for statusline
+
+set shortmess+=F "quiet the command line
