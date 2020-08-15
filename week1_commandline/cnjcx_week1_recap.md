@@ -320,7 +320,7 @@ for you to download.
     **For Unix and Windows Subsystem for Linux**
 
     ```bash
-    $ apt-get install tmux
+    $ sudo apt-get install tmux
     ```
     
 6. Download **`vim`** (if you don't already have it)
@@ -336,7 +336,7 @@ for you to download.
     **For Unix and Windows Subsystem for Linux**
 
     ```bash
-    $ apt-get install vim
+    $ sudo apt-get install vim
     ```
 ### 2. Files from Josh-Eshed-Tucker (JET)
 **`tmux`** and **`vim`** sometimes get a bad rap. We think this partly due to the
