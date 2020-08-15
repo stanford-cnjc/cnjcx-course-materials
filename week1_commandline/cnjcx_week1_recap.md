@@ -364,3 +364,5 @@ Yes, you probably just don't have any non-hidden files in your home directory ye
 
 ### When do I need to use `echo`? 
 Many commands output text to the standard output (the terminal window) by default. For example, `pwd` print the absolute path of the current working directory to the terminal. If you want to print a message yourself, however, you can use `echo "my message"` to print the message, or `echo "my message" > my_file.txt` to redirect the printing of the message to a file instead of the terminal window.
+
+[cnjcxlink]: https://stanford-cnjc.github.io/#/CNJCx
