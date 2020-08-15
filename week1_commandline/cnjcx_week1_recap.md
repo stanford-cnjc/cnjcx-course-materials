@@ -247,16 +247,16 @@ $ lrt
 ```
 
 ## Preparation for Next Session<a name="nextsesh"></a>
-In next week's session we are going to share some of the tools that we believe
-will make you a more powerful python developer. These tools are part of our
-bread 'n butter. <a name="returnfootnote1"></a> We will discuss how to effectively multitask within the
-terminal, we will find the text editor that suits your needs (with special
-attention to our favorite), and if we have time, we will show you how to
-connect to a remote machine[<sup>1</sup>](#footnote1)!
+In next week's session we will share some of the tools that we believe can make
+you a more powerful python developer. <a name="returnfootnote1"></a> You will
+learn how to effectively multitask within the terminal, find a text editor that
+suits your needs (with special attention to our favorite), and if there is
+time, we will show you how to connect to a remote
+machine[<sup>1</sup>](#footnote1)!
 
-**In order to get the most out of our time together there are two orders of 
-business.** (1) There is some software that you need. (2) We have a couple files 
-for you to download.
+**In order to get the most out of our next session there are two things you can 
+take care of before we meet:** (1) get a few pieces of software, and (2) download
+a couple files we wrote for you.
 
 ### 1. Software
 
@@ -266,7 +266,7 @@ for you to download.
     $ which tmux # note: the which command locates a program
     ```
 
-    - if you see `tmux not found`, keep that in mind. We will show you how to
+    - if you see `tmux not found` or nothing, keep that in mind. We will show you how to
       download tmux in step 5 once we have checked one more thing.
     - if you see a path, then you already have it! You may see
       `/usr/local/bin/tmux` or `/usr/bin/tmux`.
@@ -277,8 +277,8 @@ for you to download.
     $ which vim # same story here check for program location
     ```
 
-    - if you see `vim not found`, keep that in mind. We will show you how to
-      download it in the next below. See step 6 after step 4.
+    - if you see `vim not found` or nothing, keep that in mind. We will show you how to
+      download it in step 6.
     - if you see a path, then you already have it! You may see
       `/user/local/bin/vim` or `/usr/bin/vim`.
 
@@ -293,7 +293,7 @@ for you to download.
     Homebrew is the best way (we know of) to get and manage packages on a Mac.
     If you would like to learn more you can read about it directly from
     [Homebrew][hblink]. Once you have Homebrew you will have access to the
-    **`brew`** command.
+    **`brew`** command (used in step 5 and 6).
 
     **Before we meet next week** you should download Homebrew. Downloading 
     Homebrew is simple. Run the following in your terminal. _Remember: If you are
@@ -318,8 +318,9 @@ for you to download.
     
     **For MacOS**
 
+    _note: the brew command comes from step 4_
     ```bash
-    $ brew install tmux
+    $ brew install tmux 
     ```
     
     **For Unix and Windows Subsystem for Linux**
@@ -334,6 +335,7 @@ for you to download.
 
     **For MacOS**
 
+    _note: the brew command comes from step 4_
     ```bash
     $ brew install vim 
     ```
@@ -345,10 +347,11 @@ for you to download.
     ```
 ### 2. Files from Josh-Eshed-Tucker (JET)
 **`tmux`** and **`vim`** sometimes get a bad rap. We think this partly due to the
-unfriendly default settings. The files you will download here will give us a chance
+unfriendly default settings. The files you download below will give us a chance
 to start out on the right foot.
 
-We will use the **`curl`** command you learned about in [Bonus Material](#bonus)
+The **`curl`** command you learned about in [Bonus Material](#bonus) is perfect 
+for our purposes here.
 
 ```bash
 $ cd ~/cncjx
@@ -375,11 +378,11 @@ Many commands output text to the standard output (the terminal window) by defaul
 [<sup>1</sup>](#returnfootnote1)<a name="footnote1"></a>  Remote machines, machines that you
 _connect to_ rather than _sit at_, are becoming more common as demands for
 computing and storage resources grow. These machines are often dedicated
-_compute machines_ specialized for the heavy computational loads required when
+"compute machines" specialized for the heavy computational loads that arise when
 performing advanced analysis or working with large datasets. While these
 machines are much more powerful than a laptop, they often lack graphical
-interfaces, requiring users to interact over the command line to take
-advantage of the compute power. One example is the [Sherlock
+user interfaces (GUIs). Without a GUI, users must interact over the command line to take
+advantage of the remote compute power. One example is the [Sherlock
 cluster][sherlocklink] which allows users to run computationally expensive
 processes, including training deep neural networks.
 
