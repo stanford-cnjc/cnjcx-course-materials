@@ -41,6 +41,8 @@ Places you can go to for some extra help:
 - [Bash Scripting Tutorial][rtbashscriptinglink] from Ryan's tutorials.
 - [`tldr` Website][tldrlink]: a web interface for the `tldr` program to show common uses for shell programs
 - [ExplainShell][eslink]: enter any shell command and get a detailed breakdown of what each part does
+- A few great resources to learn [basic skills for reproducible research][rpbasicskillslink].
+- Russ Poldrack's [advice][rpadvicelink] for learning to code from scratch.
 
 ### Tips
 1. You can press the <kbd>Tab</kbd> key on your keybaord while typing the path to a
@@ -56,3 +58,5 @@ pressing "up" to scroll through past commands.
 [rtbashscriptinglink]: https://ryanstutorials.net/bash-scripting-tutorial/bash-script.php
 [tldrlink]: https://tldr.sh/
 [eslink]: https://explainshell.com/
+[rpadvicelink]: http://www.russpoldrack.org/2016/05/advice-for-learning-to-code-from-scratch.html
+[rpbasicskillslink]: https://poldrack.github.io/psych-open-science-guide/basicskills.html
