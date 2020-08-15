@@ -347,8 +347,8 @@ We will use the **`curl`** command you learned about in [Bonus Material](#bonus)
 
 ```bash
 $ cd ~/cncjx
-$ curl -L -o basic_vimrc https://raw.githubusercontent.com/stanford-cnjc/cnjcx-course-materials/master/week2_tmux_vim/dot_files/basic_vimrc 
-$ curl -L -o basic_tmux.conf https://raw.githubusercontent.com/stanford-cnjc/cnjcx-course-materials/master/week2_tmux_vim/dot_files/basic_tmux.conf
+$ curl -L -o basic_vimrc https://git.io/JJdvq
+$ curl -L -o basic_tmux.conf https://git.io/JJdei
 ```
 
 No need to do anything with these files yet. We will work with them next week.
