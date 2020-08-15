@@ -266,9 +266,10 @@ for you to download.
     $ which tmux # note: the which command locates a program
     ```
 
-    - if you see `tmux not found`, keep that in mind. We will show you how to 
-    download tmux in step 5 once we have checked one more thing.
-    - if you see a path, then great! You may see `/usr/local/bin/tmux` or `/usr/bin/tmux`.
+    - if you see `tmux not found`, keep that in mind. We will show you how to
+      download tmux in step 5 once we have checked one more thing.
+    - if you see a path, then you already have it! You may see
+      `/usr/local/bin/tmux` or `/usr/bin/tmux`.
 
 3. Check if you have **`vim`**:
 
@@ -276,23 +277,27 @@ for you to download.
     $ which vim # same story here check for program location
     ```
 
-    - if you see `vim not found`, keep that in min. We will show you how to download
-    it in the next below. See step 6 after step 4.
-    - if you see a path, then great! You may see `/user/local/bin/vim` or `/usr/bin/vim`
+    - if you see `vim not found`, keep that in mind. We will show you how to
+      download it in the next below. See step 6 after step 4.
+    - if you see a path, then you already have it! You may see
+      `/user/local/bin/vim` or `/usr/bin/vim`.
 
-4. Introducing you to your package manager.
+4. Introducing you to your package manager:
+
+    Package managers help a developer download command line programs that
+    did not come pre-installed on their machine. Getting and managing packages
+    will be _critical for python devlopment_.
 
     **For MacOS**
 
-    A package manager helps a developer download command line
-    programs that didn't come pre-installed on their machine.
-    If you would like to learn more you can read about it
-    directly from [Homebrew][hblink]. On a Mac, Homebrew is the best way (we know of) to
-    get and manage the packages that will fuel your command line, _including
-    those we will need for python development._
+    Homebrew is the best way (we know of) to get and manage packages on a Mac.
+    If you would like to learn more you can read about it directly from
+    [Homebrew][hblink]. Once you have Homebrew you will have access to the
+    **`brew`** command.
 
     **Before we meet next week** you should download Homebrew. Downloading 
-    homebrew is simple. Run the following in your terminal. _Remember: the `$` 
+    Homebrew is simple. Run the following in your terminal. _Remember: If you are
+    copy-pasting, the leading `$` 
     is there to orient you, don't type that :)_
 
     ```bash
@@ -303,7 +308,7 @@ for you to download.
     **For Unix and Windows Subsystem for Linux**
     
     You already have a great package manager onboard called **`apt-get`**. **`apt-get`** is 
-    the primary package manager for derivatives of Debian, like Ubuntu.
+    the classic package manager for derivatives of Debian, like Ubuntu.
     
     Double check you have **`apt-get`** with `$ which apt-get`. If you don't have
     it, please email us.
