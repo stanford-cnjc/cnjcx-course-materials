@@ -7,8 +7,6 @@
 ## Table of Contents
 1. [Table of Commands](#commands)
 1. [Resources and Tips](#rnt)
-1. [FAQ](#faq)
-
 
 ## Table of Commands<a name="commands"></a>
 The following table documents all of the commands that were introduced in week 1, including commonly used flags and options. Please refer back to this table at any time!
