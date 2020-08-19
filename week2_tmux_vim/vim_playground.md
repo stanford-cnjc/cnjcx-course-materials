@@ -1,16 +1,68 @@
 This is a Vim playground where we will practice our vim-craft.
 
-You will use superpowers
-to remove this lame set
-of lines that are taking
-up space for no reason.
+TO EXIT: [Esc] then [:q!] press [Enter] through any warnings.
+         [Ctr-c] then [:q!] press [Enter] through any warnings.
 
-# The FIRST thing we need to do is play around in "NORMAL"  mode. 
+You will use vimpowers             ^
+to remove this lame set           [k]    <---------.
+of lines that are taking       <[h]+[l]>           |
+up space for no reason            [j]              |
+just leave them for now.           v       (these keys are arrows in vim)
+
+# In class basics!
+
+--MODE--     --PRESS--    ---------------------Utility----------------------
+
+NORMAL         [Esc]     You can move around, cut characters, and paste them.
+
+INSERT       ([Esc])[i]          You can put new text into your file.
+
+VISUAL       ([Esc])[v]          You can select text to cut, or copy.
+
+VISUAL LINE  ([Esc])[V]          You will select entire lines at once.
+
+VISUAL BLOCK ([Esc])[V]          You will select a block of text.
+
+
+# In class practice!
+
+--MODE--      ---------------------What You Can Do----------------------
+
+NORMAL [Esc]   We can perform basic navigation with [h],[j],[k],[l].
+
+NORMAL         We R can E remove M single O characters V with E [x] key!
+
+NORMAL         We can paste with [p] from the "default register"
+               -------(    .    )-------paste on the "." 
+
+NORMAL         We can paste with the [P] from the "default register"
+               -------(    .    )-------paste on the "." 
+
+NORMAL         We can send commands like "save" [:w] from this mode.
+
+NORMAL         We can send commands like "save" [:w] from this mode.
+
+VISUAL [v]     We can select SELECT ME in this mode. Hit [y] to "yank" selected.
+
+NORMAL [Esc]   -------(    .    )-------paste on the "." to see what happens. 
+
+VIS. LINE [V]  We can select entire lines in this mode. Try [d] on next line.
+|                          SELECT MY WHOLE LINE                             |
+|                  SELECT MY WHOLE LINE AT THE SAME TIME                    |
+|                SELECT MY WHOLE LINE TO COMPLETE THE RYME -Bob Dylan       |
+
+NORMAL [Esc]   -------(    .    )-------paste on the "." to see what happens.
+
+VIS.  [Ctrl-V] We can select columns or blocks of text.
+BLOCK          When combined with [I] this is a powerfult tool for commenting.                
+
+
+
+# More to do in "NORMAL"  mode. 
 Press [Esc] a couple times.
 
 LETS NAVIGATE using **motions**
 
-We can perform basic navigation with [h],[j],[k],[l].
 We can also move a bit quicker between words with [w], [e], and [b]
 We can move to the beginig of a line with [^] or the end of a line with [$].
 (We (can move to the bracket partner) with [%])
@@ -22,7 +74,6 @@ We can jump with [f&] to jump to any character (like &), jump back with[F&]
 LETS PERFORM 1-KEY ALTERATIONS
 
 Re Ean Peplace Lharacters Aith Che [r] Eey!
-We R can E remove M single O characters V with E [x] key!
 We can paste with [p] from the "default register"
 -------(    .    )-------paste on the "." 
 We can paste with the [P] from the "default register"
@@ -53,7 +104,7 @@ Get vimified with [d3w] to REMOVE REMOVE REMOVE remove thos pesky words.
 Using a **range** we can remove the lines from the header [:3,6d]
 
 
-# The SECOND thing we need to do is add text in "-- INSERT --" mode. 
+# More to do in "-- INSERT --" mode. 
 Press [Esc] a couple times.
 
 LETS ADD TEXT (remember [Esc] takes you out of INSERT)
@@ -67,7 +118,7 @@ How about adding text to the begining of the line with [I]
 I bet you can guess how to add to the end of the line
 -------CNJCx is very
 
-# The THIRD thing we need to do is select text in the "-- VISUAL --" modes. 
+# Refresh the "-- VISUAL --" modes. 
 Press [Esc] a couple times.
 
 WORKING IN " -- VISUAL--" MODE, [v]
@@ -84,7 +135,7 @@ Removing a chunk of code is easy in this mode, hit [d]?
 
 COMMENTING IN "-- VISUAL BLOCK--" MODE, [Ctrl-v]
 
-add any character you like
+This is how to add any character you like
 to the start of each of these
 lines with [I] after you
 have selected them with [Ctrl-v]
