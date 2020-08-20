@@ -14,6 +14,9 @@ set softtabstop=4 "how much white space added by 'tab' and removed by 'backspace
 set expandtab "makes a 'tab' a set of spaces  that is TABSTOP in length
 set autoindent "will keep you indented NOTE: also try smartindent if you like
 
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
+
 " User interface stuff
 "set history=50 "save vim command history
 set ruler "always show my cursor
