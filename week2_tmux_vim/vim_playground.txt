@@ -23,7 +23,7 @@ VISUAL       ([Esc])[v]          You can select text to cut, or copy.
 
 VISUAL LINE  ([Esc])[V]          You will select entire lines at once.
 
-VISUAL BLOCK ([Esc])[V]          You will select a block of text.
+VISUAL BLOCK ([Esc])[Ctrl-v]          You will select a block of text.
 
 
 vvvvvvvvvvvvvvvvvv
@@ -50,7 +50,7 @@ VISUAL [v]     We can select SELECT ME in this mode. Hit [y] to "yank" selected.
 
 NORMAL [Esc]   -------(    .    )-------paste on the "." to see what happens. 
 
-VIS. LINE [V]  We can select entire lines in this mode. Try [d] on next line.
+VIS. LINE [Ctrl-v]  We can select entire lines in this mode. Try [d] on next line.
 |                          SELECT MY WHOLE LINE                             |
 |                  SELECT MY WHOLE LINE AT THE SAME TIME                    |
 |                SELECT MY WHOLE LINE TO COMPLETE THE RYME -Bob Dylan       |
