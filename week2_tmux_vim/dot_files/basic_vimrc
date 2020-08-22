@@ -4,8 +4,8 @@
 " vvvvvvvvvvvvv           vvvvvvvvvvvvvvvv
 " USAGE TRICK: ln to this file on the home directory to establish this .vimrc
 "
-" this goes first, we don't care about vi settings
-set nocompatible
+" this goes first, we don't care about vi settings, vi came before vim
+set nocompatible "use vim settings, forget vi
 
 " Nice formatting stuff
 set tabstop=4 "how many columns is a tab
@@ -14,17 +14,18 @@ set softtabstop=4 "how much white space added by 'tab' and removed by 'backspace
 set expandtab "makes a 'tab' a set of spaces  that is TABSTOP in length
 set autoindent "will keep you indented NOTE: also try smartindent if you like
 
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+au BufWinLeave * mkview "saves folded text, fold text with [zf] after highlighting 
+au BufWinEnter * silent loadview "folds are preserved, upon opening [za] to unfold 
 
 " User interface stuff
 "set history=50 "save vim command history
 set ruler "always show my cursor
 set showcmd "display incomplete commands
-set incsearch "when you are searching highlighting starts before you hit <enter>
+set incsearch "when you are searching highlighting starts before you hit [Return]
 set backspace=indent,eol,start "more intuitive backspace settings
 set number "show line numbers
 set colorcolumn=80 "page width line, keeps you from typing way off the page which is pretty inconvenient because it just wraps around and is hard to read.
+
 if has('mouse') "if we have a mouse, use it
     set mouse=a
 endif
