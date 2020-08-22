@@ -1,6 +1,9 @@
-This is a Vim playground where we will practice our vim-craft. This document
-is a short and sweet tutorial based on "vimtutor" by M.C. Pierce and R.K. Ware.
-Vim playground teaches you some things vimtutor will not (and vice-versa).
+In vim_playground you will practice our vim-craft. This document is a short and
+sweet tutorial based on "vimtutor"  written by M.C. Pierce and R.K. Ware, and
+adapted by B. Moolenaar. B Moolenaar wrote vim.
+
+We wrote vim_playground to teach you some things vimtutor will not. Note vimtutor
+will teach you some things vim_playground won't.
 
 To access vimtutor run it as a command in your shell:
 $ vimtutor
@@ -45,9 +48,13 @@ In class practice!
 
 NORMAL [Esc]   We can perform basic navigation with [h],[j],[k],[l].
 
-NORMAL         We R can E remove M single O characters V with E [x] key!
+NORMAL         We Rcan Eremove Msingle Ocharacters Vwith E[x] key!
 
 NORMAL         We can send commands like "save" [:w] or [:write] from this mode.
+
+NORMAL         Commands can also set options like "number" [:set number]
+
+NORMAL         ...or unset options like "nonumber" [:set nonumber]
 
 vvvvvvvvvvvvvvvvvvvvvvvvvv
 Just follow along for now!
@@ -58,21 +65,19 @@ NORMAL         We can paste with [p] from the "default register"
 
 NORMAL         We can paste with the [P] from the "default register"
 
-
 VISUAL [v]     We can select SELECT ME in this mode. Hit [y] to "yank" selected.
 
 NORMAL [Esc]   -------(    .    )-------paste on the "." to see what happens. 
 
 VIS. LINE [Ctrl-v]  We can select entire lines in this mode. Try [d] on next line.
-|                          SELECT MY WHOLE LINE                             |
-|                  SELECT MY WHOLE LINE AT THE SAME TIME                    |
-|                SELECT MY WHOLE LINE TO COMPLETE THE RHYME -Bob Dylan       |
+|                           SELECT MY WHOLE LINE                             |
+|                   SELECT MY WHOLE LINE AT THE SAME TIME                    |
+|                SELECT MY WHOLE LINE TO COMPLETE THE RYME -Bob Dylan       |
 
 NORMAL [Esc]   -------(    .    )-------paste on the "." to see what happens.
 
 VIS.  [Ctrl-V] We can select columns or blocks of text.
 BLOCK          When combined with [I] this is a powerful tool for commenting.                
-
 
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvv
