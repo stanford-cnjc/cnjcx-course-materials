@@ -1,13 +1,24 @@
-This is a Vim playground where we will practice our vim-craft.
+This is a Vim playground where we will practice our vim-craft. This document
+is a short and sweet tutorial based on "vimtutor" by M.C. Pierce and R.K. Ware.
+Vim playground teaches you some things vimtutor will not (and vice-versa).
 
-TO EXIT: [Esc] then [:q!] press [Enter] through any warnings.
-         [Ctr-c] then [:q!] press [Enter] through any warnings.
+To access vimtutor run it as a command in your shell:
+$ vimtutor
 
-You will use vimpowers             ^
-to remove this lame set           [k]    <---------.
-of lines that are taking       <[h]+[l]>           |
-up space for no reason            [j]              |
-just leave them for now.           v       (these keys are arrows in vim)
+TO EXIT VIM PLAYGROUND: [Esc] then [:q!] press [Enter] through any warnings.
+                        [Ctr-c] then [:q!] press [Enter] through any warnings.
+     
+                           ^
+                          [k]    <---------.
+                       <[h]+[l]>           |
+                          [j]              |
+                           v       (these keys are arrows in vim)
+
+You will use vimpowers        
+to remove this lame set       
+of lines that are taking      
+up space for no reason        
+just leave them for now.      
 
 vvvvvvvvvvvvvvv
 In class basics!
@@ -36,15 +47,17 @@ NORMAL [Esc]   We can perform basic navigation with [h],[j],[k],[l].
 
 NORMAL         We R can E remove M single O characters V with E [x] key!
 
+NORMAL         We can send commands like "save" [:w] or [:write] from this mode.
+
+vvvvvvvvvvvvvvvvvvvvvvvvvv
+Just follow along for now!
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 NORMAL         We can paste with [p] from the "default register"
                -------(    .    )-------paste on the "." 
 
 NORMAL         We can paste with the [P] from the "default register"
-               -------(    .    )-------paste on the "." 
 
-NORMAL         We can send commands like "save" [:w] from this mode.
-
-NORMAL         We can send commands like "save" [:w] from this mode.
 
 VISUAL [v]     We can select SELECT ME in this mode. Hit [y] to "yank" selected.
 
@@ -53,12 +66,12 @@ NORMAL [Esc]   -------(    .    )-------paste on the "." to see what happens.
 VIS. LINE [Ctrl-v]  We can select entire lines in this mode. Try [d] on next line.
 |                          SELECT MY WHOLE LINE                             |
 |                  SELECT MY WHOLE LINE AT THE SAME TIME                    |
-|                SELECT MY WHOLE LINE TO COMPLETE THE RYME -Bob Dylan       |
+|                SELECT MY WHOLE LINE TO COMPLETE THE RHYME -Bob Dylan       |
 
 NORMAL [Esc]   -------(    .    )-------paste on the "." to see what happens.
 
 VIS.  [Ctrl-V] We can select columns or blocks of text.
-BLOCK          When combined with [I] this is a powerfult tool for commenting.                
+BLOCK          When combined with [I] this is a powerful tool for commenting.                
 
 
 
