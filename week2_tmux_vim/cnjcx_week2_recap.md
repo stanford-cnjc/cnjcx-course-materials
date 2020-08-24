@@ -7,13 +7,14 @@ the command line. These tools will be particularly valuable if/when you work on
 machines that lack a **Graphical User Interface (GUI)**.
 
 In today's session we are going to use a command line text editor called **`vim`**. There are 
-many GUI based editors, also. Vscode, Atom, and Sublime are a few we've used in 
+many GUI based editors, also. [VS Code](https://code.visualstudio.com/), [Atom](https://atom.io/),
+and [Sublime](https://www.sublimetext.com/) are a few we've used in 
 the past. However when you are working on a remote machine, a command editor like 
 vim, emacs, or nano will be far more convenient. 
 
 **`vim`** is our choice because it has the best learning-curve:power ratio.
  
-**Session Leaders**: Josh Melander, Eshed Margalit, and Tucker Fisher
+**Session Leaders**: Tucker Fisher
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
@@ -57,31 +58,32 @@ $ cd ~
 ```
 
 We are going to make a new directory with `mkdir -p`. The `-p` flag will allow
-`mkdir` to make intermediate directories. If you don't have a `cnjcx` directory 
-this command will simultaneously create `~/cnjcx/` and `~/cnjcx/week_2/`. **Note:
-if dir already exists, mkdir will not warn you when invoking the `-p` flag.** 
+`mkdir` to make intermediate directories. If you don't have a `cnjcx` directory,
+this command will simultaneously create `~/cnjcx/` and `~/cnjcx/week_2/`. Note:
+if the target directory already exists, the -p flag will suppress the error
+message `mkdir: <dir>: File exists`.
 
 ```bash
 $ mkdir -p ~/cnjcx/week_2
 ```
 <a name="returnredirectfootnote"></a>
 
-Make `week_2` your current directory.
+Make `week_2` your current working directory.
 
 ```bash
 $ cd ~/cnjcx/week_2
 ```
 
-Let's get a few files we put on github. The `curl` command transfers
-data from a URL. The `-L` flag (capitalization matters with flags) makes `curl`
-follow a redirect[<sup>1</sup>](#redirectfootnote). The `-o` flag tells `curl` to
+Let's download a few files hosted on GitHub. The `curl` command transfers
+data from a URL. The `-L` flag (capitalization matters with flags) allows `curl`
+to follow HTTP redirects[<sup>1</sup>](#redirectfootnote). The `-o` flag tells `curl` to
 rename the file to your specified name. For example without `-o` the first command would make
 the file "JJdvq" instead of "basic_vimrc".
 
 ```bash
 $ curl -L -o basic_vimrc https://git.io/JJdvq
 $ curl -L -o basic_tmux.conf https://git.io/JJdei
-$ curl -l -o vim_playground.txt https://git.io/JJh7g
+$ curl -L -o vim_playground.txt https://git.io/JJh7g
 ```
 
 Practicing a few more skills from last week, copy two of these files to your
@@ -102,21 +104,21 @@ have just used `~`, but this was a good refresher.
 
 Before you enter **`vim`** for the first time, there are a few things to keep 
 in mind:
-1. When you first open vim it will be listening for **hotkeys**. These are keys that 
-specify a "command" to vim. Be careful not to press keys unintentionally.
-1. Vim hotkeys are case sensitive. If you accidentally press <kbd>Caps Lock</kbd> 
-you might send a whole bunch of foreign commands and get lost.
+1. Unlike a standard text editor, vim listens for commands when it is first opened.
+Different commands are called by pressing keys on your keyboard. Be careful not to press keys unintentionally!
+1. Vim commands are case sensitive. If you accidentally press <kbd>Caps Lock</kbd> 
+you might send a whole bunch of foreign commands and get lost or stuck.
 1. If you ever get trapped or confused during this section and you can't quit, or
-anything else _just close your terminal_. You can start it up again. Also if your
-file gets messed up, no worries, just `curl` it again. 
-1. How to quit: 
+anything else _just close your terminal_. You can start it up again. If your
+file gets messed up, no worries, just `curl` it again and start fresh! 
+1. How to quit vim: 
     1. exit 
         - <kbd>Esc</kbd> then `:q` <kbd>Enter</kbd>
     1. save and exit 
-        - <kbd>Esc</kbd> then `:wq` <kbd>Enter</kbd>-- most common
+        - <kbd>Esc</kbd> then `:wq` <kbd>Enter</kbd> (this is the most common way to exit vim)
         - <kbd>Esc</kbd> then `ZZ` <kbd>Enter</kbd>
         - <kbd>Esc</kbd> then `:x` <kbd>Enter</kbd>
-    1. exit force w/o saving 
+    1. exit without saving (force exit)
         - <kbd>Esc</kbd> then `:q!` <kbd>Enter</kbd>
         - <kbd>Esc</kbd> then `ZQ` <kbd>Enter</kbd>
     1. emergency exit 
@@ -128,7 +130,7 @@ Ok, open the vim playground and read through it. Just make sure you are home for
 $ vim vim_playground.txt
 ```
 
-If you would like to learn more take a look at `vimtutor`.
+If you would like to learn more take a look at `vimtutor`, a built-in tutorial program that explains vim basics.
 
 ```bash
 $ vimtutor
@@ -227,7 +229,7 @@ When you open **`tmux`** it will look like just like terminal, but will have a
 line of text at the bottom. We set the color to purple, from the default green,
 in the ~/.tmux.conf. If you prefer green, you now know how to open that file
 and edit it: `$ vim ~/.tmux.conf`. The "classic" **`tmux`** colors are there
-"commented out" by a `#`. The computer ignores all lines that begin
+"commented out" by a `#`. Tmux ignores all lines that begin
 with `#` in the .tmux.conf.
 
 Like **`vim`**, **`tmux`** has "hotkeys" as shortcuts for common commands. To
@@ -239,7 +241,7 @@ you command. For example to leave **`tmux`** is simple:
 of the session we will show the leader as `C-b`. This is how it is most often
 documented.
 
-NOTE: the terminals are full shells. We can use the leader to separate tmux commands
+NOTE: the terminals are full shells. We use the leader to separate tmux commands
 from regular terminal commands.
 
 `C-b` + `d` -- detaches from the session
@@ -256,12 +258,12 @@ $ tmux attach-session -t firstone
 $ tmux a -t firstone
 ```
 
-The `-t` stands for target. It allows you to specify an attachment point. 
+The `-t` stands for target. It allows you to specify the session you'd like to attach to.
 
 `C-b` + `d` -- to detach again, and open a new session called "secondone".
 
 ```bash
-$ tmux new -s secondone
+$ tmux new-session -s secondone
 ```
 
 **`Tmux`** can manage multiple sessions, as you have just illustrated by opening
@@ -296,7 +298,8 @@ Tmux also accepts commands with `:` after the leader. You will see a bar appear 
 Moving between sessions can be much simpler than detaching and reattaching. The `s` command
 lets you switch between your open sessions. 
 
-`C-b` + `s` -- choose from session tree. Use arrows to move between and <kbd>Enter</kbd> to select.
+`C-b` + `s` -- choose from session tree. Use arrows to move between and <kbd>Enter</kbd> to
+select (or type the number next to the session you want to switch to).
 
 To kill a session is simple. Using the `kill-session` command and the target flag, `-t`, you can point 
 to any session and kill it.
@@ -307,11 +310,11 @@ $ tmux kill-session -t secondone
 
 #### Live 5: SSH
 
-The command **`ssh`** is the most common way to form a connection with a Linux
+The command **`ssh`** is the most common way to form a connection with a
 server. It stands for "**s**ecure **sh**ell". In order to use **`ssh`**, you
-must have a server with which to connect. Some universities have shared
-computing resources to which students have access, or can request access. In the
-examples we are going to use a shared resource called Farmshare2. If you are connecting 
+must have a server to connect to. Some universities have shared
+computing resources students have access to. In the
+examples we are going to use a shared Stanford resource called Farmshare2. If you are connecting 
 to a personal server or lab computer you can check out [Setting Up Your Server](#setting-up-your-server) 
 in the [Bonus Materials](#bonus-materials). 
 
@@ -329,15 +332,15 @@ Before you connect these are a few tidbits of jargon you might find useful.
   the server. On Farmshare2 "user" is your SUNetID. On your personal server it will
   be the username of the account.
 - **X11** -- is a windowing system that runs on your local machine. It receives
-  data, that would be GUIs on the server, and renders them on the client. You
-  need "X11" to see the figures you make in python, for example. 
+  graphical data, that would be GUIs on the server, and renders them on the client. You
+  need "X11" to see the figures you make in Python, for example. 
 
 To make a connection via **`ssh`** you run the following command. `ssh
 <User>@<hostename>`. _Note: if this is the first time you have ssh'ed to a
 particular server, you will be prompted to accept a key._
 
 Here is what a first time login to Farmshare2 looks like (_you can accept the
-fingerprint by typing... yes <kbd>Enter</kbd>_):
+fingerprint by typing "yes <kbd>Enter</kbd>"_):
 
 ```bash
 $ ssh lelandjr@rice.stanford.edu
@@ -365,7 +368,7 @@ If you are editing a file in vim it will be closed, if you are working in the py
 work will be lost, and the neural network you are training will stall.
 
 However, processes started from within a **`tmux`** window will stay alive after
-closing the **`ssh`** tunnel. &larr; **This is the primary role of `tmux`.**
+closing the **`ssh`** tunnel. &larr; **This is the primary role of `tmux` for our purposes.**
 
 Once you are logged into a server, open tmux and start editing a new file with **`vim`**.
 
@@ -499,6 +502,7 @@ This document walks through our recommended Python installation procedure for Ma
 
 ## [Click Here for macOS Instructions :apple:](#macos-instructions)
 ## [Click Here for Ubuntu (or Windows Subsystem for Linux) Instructions :penguin:](#ubuntu-instructions)
+### [Office Hours Zoom Link](#office-hours)
 
 
 ### macOS Instructions<a name="mac-instructions"></a>
@@ -565,6 +569,14 @@ $ echo -e "\n# Adding during CNJCx\nalias python3='$(which python3.8)'" >> ~/.ba
 $ exec $SHELL
 ```
 
+### Office Hours<a name="office-hours"></a>
+If you run into problems installing Python with these instructions, please attend our Week 3 office hours.
+You are also welcome to attend if you have lingering issues from content in Weeks 1 and 2!
+
+**Week 3 Office Hours**: Wednesday, August 26, 6:00pm-7:00pm Pacific Time
+
+[Office Hours Zoom Link][officehourslink] (password: 896261)
+
 ### Details for Nerds
 **Why is this so complicated?** 
 
@@ -613,7 +625,7 @@ from server...
 $ scp <usr_name>@<host_name>:/path/to/file /local/path/to/destination
 ```
 
-### I'm Getting a "bad owner or permissions on ~/.ssh/config, why?
+### I'm getting a "bad owner or permissions" on ~/.ssh/config; why?
 
 You probably created `~/.ssh` or `~/.ssh/config` with the wrong permissions.
 
@@ -623,11 +635,13 @@ $ chmod 644 ~/.ssh/config
 ```
 
 --------
-[<sup>1</sup>](#returnredirectfootnote)<a name="redirectfootnote"></a> A URL redirect
-is pretty simple. It allows a webpage to be accessed from multiple URLs. In our 
+[<sup>1</sup>](#returnredirectfootnote)<a name="redirectfootnote"></a> HTTP redirects
+are pretty simple. When your web browser reaches a website with a redirect, it sends your browser
+to a different URL automatically. URL shorteners use this all the time! In our 
 case, the URLs to these files are looooonnnngggg so we are redirecting from short, 
 easy to type URLs.
 
+[officehourslink]: https://stanford.zoom.us/j/8505742709?pwd=S2FHWkxySHBON2VtZGZTRTFFMGZNdz09
 [howtobashlink]: https://stanford-cnjc.github.io/#/CNJCx#bashInstructions
 [prepfromlastlink]: https://github.com/stanford-cnjc/cnjcx-course-materials/blob/master/week1_commandline/cnjcx_week1_recap.md#nextsesh 
 [lastweeklink]: https://github.com/stanford-cnjc/cnjcx-course-materials/tree/master/week1_commandline

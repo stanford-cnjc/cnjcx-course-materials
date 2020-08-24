@@ -1,7 +1,7 @@
 # CNJCx: Practical Python
 ## SSH, Tmux, and Vim (Week 2)
 
-**Session Leaders**: Josh Melander, Eshed Margalit, and Tucker Fisher
+**Session Leaders**: Tucker Fisher
 
 ### [Click Here for Week 2 Recap :book:](cnjcx_week2_recap.md)
 - a recap of the code-along portion of Week 1
