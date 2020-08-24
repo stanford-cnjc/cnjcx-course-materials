@@ -512,6 +512,12 @@ Open a terminal, and run these commands one at a time. Remember you don't need t
 Each of these commands might take a few minutes, don't worry if it's taking longer than expected.
 
 #### Step 1: Install Python 3 with Homebrew
+The first command installs xcode command line tools, if you don't already have them. If you do have
+them, that command will result in an error. That's okay.
+
+The second command installs Homebrew. If you already have Homebrew you can skip this step, but running it anyway won't hurt.
+
+The third command installs the Python 3 binary. If you already have this package installed with Homebrew, you'll get a warning. That's okay.
 ```bash
 $ xcode-select --install
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
