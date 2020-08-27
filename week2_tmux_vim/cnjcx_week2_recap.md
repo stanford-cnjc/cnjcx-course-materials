@@ -581,7 +581,8 @@ You are also welcome to attend if you have lingering issues from content in Week
 
 **Week 3 Office Hours**: Wednesday, August 26, 6:00pm-7:00pm Pacific Time
 
-[Office Hours Zoom Link][officehourslink] (password: 896261)
+[Office Hours Zoom Link][officehourslink] (password: 053422)
+
 
 ### Details for Nerds
 **Why is this so complicated?** 
@@ -647,7 +648,7 @@ to a different URL automatically. URL shorteners use this all the time! In our
 case, the URLs to these files are looooonnnngggg so we are redirecting from short, 
 easy to type URLs.
 
-[officehourslink]: https://stanford.zoom.us/j/8505742709?pwd=S2FHWkxySHBON2VtZGZTRTFFMGZNdz09
+[officehourslink]: https://stanford.zoom.us/j/99465554007?pwd=bjRYMUdmRUEyNkM3WGYrVTlBSHMzUT09 
 [howtobashlink]: https://stanford-cnjc.github.io/#/CNJCx#bashInstructions
 [prepfromlastlink]: https://github.com/stanford-cnjc/cnjcx-course-materials/blob/master/week1_commandline/cnjcx_week1_recap.md#nextsesh 
 [lastweeklink]: https://github.com/stanford-cnjc/cnjcx-course-materials/tree/master/week1_commandline
