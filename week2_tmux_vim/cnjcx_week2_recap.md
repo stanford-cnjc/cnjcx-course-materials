@@ -1,6 +1,6 @@
 # CNJCx: Practical Python
 ## Remote Machine Basics
-### Week 2 Reacap
+### Week 2 Recap
 
 In this session you are going to learn tools that will empower you further at
 the command line. These tools will be particularly valuable if/when you work on 
