@@ -195,7 +195,7 @@ a [basic Jupyter notebook tutorial][realpython_jupyter_tutorial].
 #### Review the Jupyter notebook from the session
 The Jupyter notebook that Julia walked through in the second half of the session is available [here](Week%203%20Part%20II%20Code%20Along.ipynb) !
 
-## Preparation for Next Session: Python Part I<a name="week4-prep"></a>
+## Preparation for Next Session: Version Control and Clean Code<a name="week4-prep"></a>
 
 ### CNJCx Week 4 Prerequisites
 In Week 4, we're going to cover version control and collaboration tools: `git` and GitHub.
