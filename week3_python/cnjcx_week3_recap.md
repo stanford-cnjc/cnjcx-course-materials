@@ -203,7 +203,7 @@ In preparation, we ask that you perform two tasks:
 
 1. If you don't already have one, [make a GitHub account][gh_signup_link].
 2. Configure the `git` program on your computer so it knows who you are! If you're on macOS, you'll need to install xcode command line tools if you haven't already.
-    1. `$ xcode-select install` (for macOS users only)
+    1. `$ xcode-select --install` (for macOS users only)
     1. `$ git config --global user.name "John Doe"`
     2. `$ git config --global user.email johndoe@example.com`
 
