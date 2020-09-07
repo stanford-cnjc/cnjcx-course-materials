@@ -396,6 +396,41 @@ Once you have detached, there are a few thing you can do to improve your **`ssh`
 In this section you will learn how to setup a host for "X forwarding". To get the most out of it, 
 complete [Live 5: SSH](#live-5-ssh) first.
 
+<div align="center">
+<img src="https://user-images.githubusercontent.com/26031420/92334011-d2977000-f03e-11ea-8560-04d75d76667f.png"
+    alt="header joke" width="75%" hspace="20">
+<p> This Figure Was Generated on a Server, But Shows Up on My Local Machine!! What the...What?!</p>
+</div>
+
+With **X11 forwarding** you gain local access to grapical windows generated remotely
+on a server. It provides access to the power of your remote (or "crunch")
+machine, with the convenience of your local one. 
+
+_Note: If you only ever want access to python plots, or you prefer to work in
+jupyter, you can "forward" plots using Jupyter notebooks. Check out this guide
+to use [jupyter notebook on a remote machine][ji_link]._
+
+When you run python **locally** on your laptop or desktop and you render a plot
+with `>>> pyplot.plot(<whatever_you_plot>); pyplot.show()` the plot pops-up
+automatically. **On the other hand, if you are working over `ssh`** and you run
+<code>>>>&nbsp;pyplot.plot(<whatever_you_plot>);&nbsp;pyplot.show()</code> two
+things could happen:
+
+1. python will work with the server's window manager (if there is one).
+   Unfortunately you will not see or have the ability to interact with the
+   plots. They will be on the server's graphical interface. 
+2. **or** (if the server doesn't have a windowing system) it will warn you that there is "no display name and no $DISPLAY
+   environment variable" and crash.
+
+In either case, you can't see the output of your clever and computationally
+demanding analysis :grimacing:. **X11 Forwarding** saves the day :smile:. With the help of
+a program, called an **X Window Server**, the `ssh -X` command commuicates with
+you server alerting it that you are setup to **X forward**. Let's get started!
+
+
+
+_Note 2: when we talk about **X Window Server** we aren't talking about Windows&reg;. However, you should see why this is a clever name... Windows&nbsp;&reg;, the operating system that has the user interact with "widows"._
+
 Verify that you have the **`ssh`** hidden directory `.ssh/` with `$ ls ~ | grep .ssh`
 
 If you don't have `.ssh/`
@@ -483,45 +518,6 @@ To forward windows must allow X11Forwarding in your server's `/etc/ssh/sshd_conf
 ```bash
 $ sudo echo "X11Forwarding yes" >> /etc/ssh/sshd_config
 ```
-
-
-#### X forwarding Local Setup 
-
-<div align="center">
-<img src="https://user-images.githubusercontent.com/26031420/92334011-d2977000-f03e-11ea-8560-04d75d76667f.png"
-    alt="header joke" width="75%" hspace="20">
-<p> This Figure Was Generated on a Server, But Shows Up on My Local Machine!! What the...What?!</p>
-</div>
-
-##### X11 forwarding: "The Why"
-
-In this guide you will gain local access to grapical windows generated remotely
-on a server. You will now have access to the power of your remote (or "crunch")
-machine, with the convenience of your local one. 
-
-
-_Note: If you only ever want access to python plots, or you prefer to work in
-jupyter, you can "forward" plots using Jupyter notebooks. Check out this guide
-to use [jupyter notebook on a remote machine][ji_link]._
-
-When you run python **locally** on your laptop or desktop and you render a plot
-with `>>> pyplot.plot(<whatever_you_plot>); pyplot.show()` the plot pops up
-automatically. **On the other hand, if you are working over `ssh`** and you run <code>>>>&nbsp;pyplot.plot(<whatever_you_plot>);&nbsp;pyplot.show()</code> two things could happen:
-
-1. python will work with the server's window manager (if there is one).
-   Unfortunately you will not see or have the ability to interact with the
-   plots. They will be on the server's graphical interface. 
-2. **or** (if the server doesn't have a windowing system) it will warn you that there is "no display name and no $DISPLAY
-   environment variable" and crash.
-
-In either case, you can't see the output of your clever and computationally
-demanding analysis :grimacing:. **X11 Forwarding** saves the day :smile:. With the help of
-a program, called an **X Window Server**, the `ssh -X` command commuicates with
-you server alerting it that you are setup to **X forward**. Let's get started!
-
-
-
-_Note 2: when we talk about **X Window Server** we aren't talking about Windows&reg;. However, you should see why this is a clever name... Windows&nbsp;&reg;, the operating system that has the user interact with "widows"._
 
 ##### X Forwarding: "The (MacOS) How"<a name="x-forwarding-macos-client"></a>
 
