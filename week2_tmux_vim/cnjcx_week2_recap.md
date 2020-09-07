@@ -402,34 +402,39 @@ complete [Live 5: SSH](#live-5-ssh) first.
 <p> This Figure Was Generated on a Server, But Shows Up on My Local Machine!! What the...What?!</p>
 </div>
 
-With **X11 forwarding** you gain local access to grapical windows generated remotely
-on a server. It provides access to the power of your remote (or "crunch")
+With **X11 forwarding** you gain local access to graphical windows generated remotely
+on a server. This means you have access to the power of your remote (or "crunch")
 machine, with the convenience of your local one. 
 
 _Note: If you only ever want access to python plots, or you prefer to work in
 jupyter, you can "forward" plots using Jupyter notebooks. Check out this guide
 to use [jupyter notebook on a remote machine][ji_link]._
 
-When you run python **locally** on your laptop or desktop and you render a plot
+When you run python **locally**, on your laptop or desktop, and you render a plot
 with `>>> pyplot.plot(<whatever_you_plot>); pyplot.show()` the plot pops-up
 automatically. **On the other hand, if you are working over `ssh`** and you run
 <code>>>>&nbsp;pyplot.plot(<whatever_you_plot>);&nbsp;pyplot.show()</code> two
 things could happen:
 
 1. python will work with the server's window manager (if there is one).
-   Unfortunately you will not see or have the ability to interact with the
-   plots. They will be on the server's graphical interface. 
-2. **or** (if the server doesn't have a windowing system) it will warn you that there is "no display name and no $DISPLAY
-   environment variable" and crash.
+   Unfortunately, you will not see or have the ability to interact with the
+   plots. They will be on the server's graphical interface--sitting lamely on a
+   monitor miles away--
+2. **or** (if the server doesn't have a windowing system) it will alert you
+   that there is "no display name and no $DISPLAY environment variable" and
+   crash.
 
-In either case, you can't see the output of your clever and computationally
-demanding analysis :grimacing:. **X11 Forwarding** saves the day :smile:. With the help of
-a program, called an **X Window Server**, the `ssh -X` command commuicates with
-you server alerting it that you are setup to **X forward**. Let's get started!
+In either case, you _can't see_ the output of your clever and computationally
+demanding analysis :grimacing:. **X11 forwarding** saves the day :smile:. With the help of
+a program, called an **X window server**, the `ssh -X` command communicates with
+your server specifying that you are setup to **X forward**. Let's get started!
 
 
 
-_Note 2: when we talk about **X Window Server** we aren't talking about Windows&reg;. However, you should see why this is a clever name... Windows&nbsp;&reg;, the operating system that has the user interact with "widows"._
+_Note 2: when we talk about the **X window server** or **forwarding windows** we aren't talking about
+Windows&reg;. However, you should see why this is a clever name...
+Windows&nbsp;&reg; is an operating system that has the user interact with
+"widows"._
 
 Verify that you have the **`ssh`** hidden directory `.ssh/` with `$ ls ~ | grep .ssh`
 
@@ -448,7 +453,7 @@ $ cd ~/.ssh
 $ vim config
 ```
 
-Inside the config file place these lines...
+Inside the `~/.ssh/config` file place these lines...
 
     Host <host_nickname> 
         Hostnme <your_host_name>
@@ -513,7 +518,7 @@ $ sudo systemctl enable ssh
 $ sudo systemctl start ssh
 ```
 
-To forward windows must allow X11Forwarding in your server's `/etc/ssh/sshd_config`
+To forward windows must allow X11 forwarding in your server's `/etc/ssh/sshd_config`
 
 ```bash
 $ sudo echo "X11Forwarding yes" >> /etc/ssh/sshd_config
@@ -534,7 +539,7 @@ $ open .
 ##### X11 Forwarding: "The (WSL) How"<a name="x-forwarding-windows-client"></a>
 
 Thanks to a unique relationship between WSL and the windows graphics.
-Xforwarding from a server machine is not clearly and cleanly documented. So we
+X forwarding from a server machine is not clearly and cleanly documented. So we
 made this up for you.
 
 1. google "xming x server for windows" I found the download at sourceforge.net/projects/xming/
