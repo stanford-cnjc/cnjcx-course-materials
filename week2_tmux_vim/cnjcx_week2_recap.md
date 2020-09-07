@@ -485,6 +485,145 @@ $ curl -L -o XQuartzInstaller.dmg https://rb.gy/u3syhp
 $ open .
 ```
 
+#### X11 forwarding Windows Client 
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/26031420/92334011-d2977000-f03e-11ea-8560-04d75d76667f.png"
+    alt="header joke" width="75%" hspace="20">
+<p> This Figure Was Generated on a Server, But Shows Up on Your Local Machine!! What the...What?!</p>
+</div>
+
+##### X11 forwarding: "The Why"
+
+In this guide you will gain local access to figures generated remotely on a server. You will now have access to the power of your
+remote (or "crunch") machine, with the convenience of your local one. 
+
+When you run python **locally** on your laptop or desktop and you render a plot
+with `>>> pyplot.plot(<whatever_you_plot>); pyplot.show()` the plot pops up
+automatically. 
+
+On the other hand, if you are **working over `ssh`** and you run `>>>
+pyplot.plot(<whatever_you_plot>); pyplot.show()` two things could happen:
+
+1. python will work with the window manager on the remote (if there is one).
+   Unfortunately you will not see or have the ability to interact with the
+   plots. They will be on the server's graphical interface. 
+2. **or** it will warn you that there is "no display name and no $DISPLAY
+   environment variable" (if the server doesn't have a windowing system).
+
+In either case, you can't see the output of your clever and computationally
+demanding analysis :smile:. **X11 Forwarding** saves the day. With the help of
+a program, called an **X Window Server**, the `ssh -X` command commuicates with
+you server alerting it that you are setup to **X forward**. Let's get started!
+
+Thanks to a unique relationship between WSL and the windows graphics.
+Xforwarding from a server machine is not clearly and cleanly documented. So we
+made this up for you.
+
+_Note: when we talk about **X Window Server** we aren't talking about Windows&reg;. You should see why this is a clever name... Windows&nbsp;&reg;, the operating system that has the user interact with "widows"._
+_Note 2: You can also achieve this with a Jupyter notebook._
+
+
+##### X11 Forwarding: "The (WSL) How"
+
+1. google "xming x server for windows" I found the download at sourceforge.net/projects/xming/
+
+2. Download it...
+
+    1. Download from [sourceforge.net][sf_link]
+
+        <div align="center">
+        <img src="https://user-images.githubusercontent.com/26031420/92314887-0b7a0b00-ef93-11ea-818b-028dd251ee48.png"  
+            alt="Download on SourceForge" width="75%">
+        </div>
+
+    2. Open the **Xming** executable after download.
+
+        <div align="center">
+        <img src="https://user-images.githubusercontent.com/26031420/92317824-e056e200-efb9-11ea-9eb7-7b1597756397.png"
+            alt="Execute" width="75%"></img>
+        </div>
+
+    3. Allow the app to make changes and start the Xming setup wizard
+
+
+        <div align="center">
+        <img src="https://user-images.githubusercontent.com/26031420/92317906-aafec400-efba-11ea-942d-49298b0001aa.png"
+            alt="allow app" width="30%" hspace="20">
+        <img src="https://user-images.githubusercontent.com/26031420/92318155-0a5dd380-efbd-11ea-8335-f1923f87d03b.png"
+            alt="start wizard" width="30%" hspace="20">
+        </div>
+
+    4. Select _Don't install an SSH client_: you already have an ssh client with your **WSL** distribution. All you need from **Xming** is the window server.
+
+        <div align="center">
+        <img src="https://user-images.githubusercontent.com/26031420/92318074-07aeae80-efbc-11ea-9459-959c4d90de80.png"
+            alt="no client" width="45%" hspace="20">
+        </div>
+
+    5. Click through the rest of the installer, and make yourself a desktop icon so that **Xming** is more convenient to use in the future.
+        <div align="center">
+        <img src="https://user-images.githubusercontent.com/26031420/92318371-4f373980-efc0-11ea-8379-6c9d3c0ee324.png"
+            alt="desktop icon" width="45%" hspace="20">
+        </div>
+
+    6. After installation you will be cued to make some firewall changes. Leave these closed by unchecking them.
+
+        <div align="center">
+        <img src="https://user-images.githubusercontent.com/26031420/92318488-d6d17800-efc1-11ea-8ad8-6bb5a3309992.png"
+            alt="close firewall" width="45%" hspace="20">
+        </div>
+
+
+3. Take care of a couple things in your **WSL** terminal.
+
+    Place `export DISPLAY=localhost:0.0` in the last line of your `~/.bashrc`
+
+    `exec $SHELL` so that these changes get run for your current shell.
+
+4. Double-Click the **Xming** desktop icon. 
+
+    <div align="center">
+    <img src="https://user-images.githubusercontent.com/26031420/92334569-2ce6ff80-f044-11ea-87a7-bf3c5ecca90f.png"
+        alt="desktop icon" width="7%" hspace="20">
+    </div>
+
+    The **Xming** icon will show up in your "hidden icons" once it is open.
+
+    <div align="center">
+    <img src="https://user-images.githubusercontent.com/26031420/92331549-5a27b380-f02c-11ea-9b03-afd6f5b8d0ff.png"
+        alt="hidden icon" width="15%" hspace="20">
+    </div>
+
+5. Connect using `ssh -X`. 
+
+    If you have access to Farmshare2 you can run `ssh -X <your_SUNetID>@rice.stanford.edu.
+        
+    Remember to look at our [Remote Graphics Forwarding](https://github.com/stanford-cnjc/cnjcx-course-materials/blob/master/week2_tmux_vim/cnjcx_week2_recap.md#live-6-remote-graphics-forwarding) section to simplify `ssh` usage. 
+
+    Also, if you are connecting to your own server, it may require setup. The [SSH Server Setup](https://github.com/stanford-cnjc/cnjcx-course-materials/blob/master/week2_tmux_vim/cnjcx_week2_recap.md#bonus-materials) section has simple instructions to configure your server for x forwarding.
+
+6. Once connected, run `xeyes` to test your X forwarding.
+    
+    <div align="center">
+    <img src="https://user-images.githubusercontent.com/26031420/92334521-91ee2580-f043-11ea-91ba-4fca0880d282.png"
+        alt="xeyes" width="20%" hspace="20">
+    </div>
+
+    Check for a "pinned" **Xming** if it looks like nothing has happened. Sometimes the forwarded window appears behind something.
+
+    <div align="center">
+    <img src="https://user-images.githubusercontent.com/26031420/92331600-c6a2b280-f02c-11ea-85b8-05094ff5b0c1.png"
+        alt="xming pin" width="75%" hspace="20">
+    </div>
+
+7. X forward to your heart's content.
+
+    <div align="center">
+    <img src="https://user-images.githubusercontent.com/26031420/92334011-d2977000-f03e-11ea-8560-04d75d76667f.png"
+        alt="joke" width="75%" hspace="20">
+    </div>
+
 #### Public-key Authentication
 
 Setting up public-key authentication for a private server.
@@ -652,3 +791,4 @@ easy to type URLs.
 [howtobashlink]: https://stanford-cnjc.github.io/#/CNJCx#bashInstructions
 [prepfromlastlink]: https://github.com/stanford-cnjc/cnjcx-course-materials/blob/master/week1_commandline/cnjcx_week1_recap.md#nextsesh 
 [lastweeklink]: https://github.com/stanford-cnjc/cnjcx-course-materials/tree/master/week1_commandline
+[sf_link]: https://www.sourceforge.net/projects/xming
