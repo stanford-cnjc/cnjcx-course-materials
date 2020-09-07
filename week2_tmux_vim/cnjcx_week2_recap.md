@@ -37,13 +37,16 @@ have pressed until you have sent the command.**
 Open your bash terminal and follow the commands. Remember, for all the commands below don't type the leading
 `$`. That is there to represent your prompt.
 
-[Live 1: Setup and Refresh](#live-1-setup-and-refresh) || 
-[Live 2: Vim](#live-2-vim) || 
-[Live 3: "dot" files](#live-3-dot-files) ||
-[Live 4: Tmux](#live-4-tmux) || 
-[Live 5: SSH](#live-5-ssh) || 
-[Live 6: Remote Graphics Forwarding](#live-6-remote-graphics-forwarding)
+<div align="center">
 
+[Setup and Refresh](#live-1-setup-and-refresh) || 
+[Vim](#live-2-vim) || 
+["dot" files](#live-3-dot-files) ||
+[Tmux](#live-4-tmux) || 
+[SSH](#live-5-ssh) || 
+[Remote Graphics Forwarding](#live-6-remote-graphics-forwarding)
+
+</div>
 
 #### Live 1: Setup and Refresh
 First, we will use a few commands we learned last week to setup for today's 
@@ -456,6 +459,14 @@ you have setup your server for X forwarding, and have an X server for your clien
  
 ## BONUS Materials<a name="bonus-materials"></a>
 
+<div align="center">
+
+|| [SSH Server Setup](#ssh-server-setup) || 
+[X Forwarding to MacOS](#x-forwarding-macos-client) ||
+[X Forwarding to Windows (with WSL)](#x-forwarding-windows-client) ||
+
+</div>
+
 #### SSH Server Setup
 
 Getting ssh for your Linux server:
@@ -473,7 +484,46 @@ To forward windows must allow X11Forwarding in your server's `/etc/ssh/sshd_conf
 $ sudo echo "X11Forwarding yes" >> /etc/ssh/sshd_config
 ```
 
-#### X Forwarding MacOS Client
+
+#### X forwarding Local Setup 
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/26031420/92334011-d2977000-f03e-11ea-8560-04d75d76667f.png"
+    alt="header joke" width="75%" hspace="20">
+<p> This Figure Was Generated on a Server, But Shows Up on My Local Machine!! What the...What?!</p>
+</div>
+
+##### X11 forwarding: "The Why"
+
+In this guide you will gain local access to grapical windows generated remotely
+on a server. You will now have access to the power of your remote (or "crunch")
+machine, with the convenience of your local one. 
+
+
+_Note: If you only ever want access to python plots, or you prefer to work in
+jupyter, you can "forward" plots using Jupyter notebooks. Check out this guide
+to use [jupyter notebook on a remote machine][ji_link]._
+
+When you run python **locally** on your laptop or desktop and you render a plot
+with `>>> pyplot.plot(<whatever_you_plot>); pyplot.show()` the plot pops up
+automatically. **On the other hand, if you are working over `ssh`** and you run <code>>>>&nbsp;pyplot.plot(<whatever_you_plot>);&nbsp;pyplot.show()</code> two things could happen:
+
+1. python will work with the server's window manager (if there is one).
+   Unfortunately you will not see or have the ability to interact with the
+   plots. They will be on the server's graphical interface. 
+2. **or** (if the server doesn't have a windowing system) it will warn you that there is "no display name and no $DISPLAY
+   environment variable" and crash.
+
+In either case, you can't see the output of your clever and computationally
+demanding analysis :grimacing:. **X11 Forwarding** saves the day :smile:. With the help of
+a program, called an **X Window Server**, the `ssh -X` command commuicates with
+you server alerting it that you are setup to **X forward**. Let's get started!
+
+
+
+_Note 2: when we talk about **X Window Server** we aren't talking about Windows&reg;. However, you should see why this is a clever name... Windows&nbsp;&reg;, the operating system that has the user interact with "widows"._
+
+##### X Forwarding: "The (MacOS) How"<a name="x-forwarding-macos-client"></a>
 
 Getting X11 for MacOS will allow you to forward windows to your laptop from a server.
 Running these commands will download the installer for `XQuartz` and open your downloads
@@ -485,46 +535,11 @@ $ curl -L -o XQuartzInstaller.dmg https://rb.gy/u3syhp
 $ open .
 ```
 
-#### X forwarding Windows Client 
-
-<div align="center">
-<img src="https://user-images.githubusercontent.com/26031420/92334011-d2977000-f03e-11ea-8560-04d75d76667f.png"
-    alt="header joke" width="75%" hspace="20">
-<p> This Figure Was Generated on a Server, But Shows Up on Your Local Machine!! What the...What?!</p>
-</div>
-
-##### X11 forwarding: "The Why"
-
-In this guide you will gain local access to figures generated remotely on a server. You will now have access to the power of your
-remote (or "crunch") machine, with the convenience of your local one. 
-
-When you run python **locally** on your laptop or desktop and you render a plot
-with `>>> pyplot.plot(<whatever_you_plot>); pyplot.show()` the plot pops up
-automatically. 
-
-On the other hand, if you are **working over `ssh`** and you run `>>>
-pyplot.plot(<whatever_you_plot>); pyplot.show()` two things could happen:
-
-1. python will work with the window manager on the remote (if there is one).
-   Unfortunately you will not see or have the ability to interact with the
-   plots. They will be on the server's graphical interface. 
-2. **or** it will warn you that there is "no display name and no $DISPLAY
-   environment variable" (if the server doesn't have a windowing system).
-
-In either case, you can't see the output of your clever and computationally
-demanding analysis :smile:. **X11 Forwarding** saves the day. With the help of
-a program, called an **X Window Server**, the `ssh -X` command commuicates with
-you server alerting it that you are setup to **X forward**. Let's get started!
+##### X11 Forwarding: "The (WSL) How"<a name="x-forwarding-windows-client"></a>
 
 Thanks to a unique relationship between WSL and the windows graphics.
 Xforwarding from a server machine is not clearly and cleanly documented. So we
 made this up for you.
-
-_Note: when we talk about **X Window Server** we aren't talking about Windows&reg;. You should see why this is a clever name... Windows&nbsp;&reg;, the operating system that has the user interact with "widows"._
-_Note 2: You can also achieve this with a Jupyter notebook._
-
-
-##### X11 Forwarding: "The (WSL) How"
 
 1. google "xming x server for windows" I found the download at sourceforge.net/projects/xming/
 
@@ -792,3 +807,4 @@ easy to type URLs.
 [prepfromlastlink]: https://github.com/stanford-cnjc/cnjcx-course-materials/blob/master/week1_commandline/cnjcx_week1_recap.md#nextsesh 
 [lastweeklink]: https://github.com/stanford-cnjc/cnjcx-course-materials/tree/master/week1_commandline
 [sf_link]: https://www.sourceforge.net/projects/xming
+[ji_link]: https://github.com/stanford-cnjc/cnjcx-course-materials/blob/master/week3_python/cnjcx_week3_resources.md#jupyter
