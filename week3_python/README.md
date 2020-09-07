@@ -4,7 +4,7 @@
 **Session Leaders**: Eshed Margalit and Julia Wang
 
 ### [Click Here for Week 3 Recap :book:](cnjcx_week3_recap.md)
-- a recap of the code-along portion of Week 2
+- a recap of the code-along portion of Week 3
 - pre-requisities for Week 4
 - bonus materials we didn't get to cover in the live session
 - frequently asked questions
