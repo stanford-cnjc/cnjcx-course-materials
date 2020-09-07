@@ -39,12 +39,12 @@ Open your bash terminal and follow the commands. Remember, for all the commands 
 
 <div align="center">
 
-[Setup and Refresh](#live-1-setup-and-refresh) || 
+|| [Setup and Refresh](#live-1-setup-and-refresh) || 
 [Vim](#live-2-vim) || 
 ["dot" files](#live-3-dot-files) ||
 [Tmux](#live-4-tmux) || 
 [SSH](#live-5-ssh) || 
-[Remote Graphics Forwarding](#live-6-remote-graphics-forwarding)
+[Remote Graphics Forwarding](#live-6-remote-graphics-forwarding) ||
 
 </div>
 
