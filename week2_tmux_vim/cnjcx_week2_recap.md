@@ -485,7 +485,7 @@ $ curl -L -o XQuartzInstaller.dmg https://rb.gy/u3syhp
 $ open .
 ```
 
-#### X11 forwarding Windows Client 
+#### X forwarding Windows Client 
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/26031420/92334011-d2977000-f03e-11ea-8560-04d75d76667f.png"
