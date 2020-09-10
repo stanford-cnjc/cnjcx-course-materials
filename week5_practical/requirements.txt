@@ -7,3 +7,6 @@ scikit-learn
 altair
 RISE
 numba
+torch
+torchvision
+vega_datasets
