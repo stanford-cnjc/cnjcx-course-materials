@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+matplotlib
+jupyter
+scikit-learn
+altair
+RISE
+numba
+torch
+torchvision
+vega_datasets
