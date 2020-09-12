@@ -1,6 +1,8 @@
 # CNJCx Week 5: Practical Python
 
-The best way to learn this content is to check out the recording on the website, and follow along with the notebook here!
+
+## Quick recap
+We covered visualizing data, data analysis, data munging, and more in this 2-hour session. The best way to learn this content is to check out the recording on the website, and follow along with the notebook here!
 Additional references & information, **IYI** (If you're interested; see video) below:
 
 ## Main libraries covered:
