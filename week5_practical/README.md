@@ -1,26 +1,16 @@
-# CNJCx Week 5: Practical Python
+# CNJCx: Practical Python
+## The Eponym Session (Week 5) :chart_with_upwards_trend:
 
+**Session Leaders**: Tyler Benster
 
-## Quick recap
-We covered visualizing data, data analysis, data munging, and more in this 2-hour session. The best way to learn this content is to check out the recording on the website, and follow along with the notebook here!
-Additional references & information, **IYI** (If you're interested; see video) below:
+### [Click Here for Week 4 Recap](cnjcx_week5_recap.md) :book:
+- A reminder about _how to_ open [the notebook](cnjcx_week5_practical_python.ipynb) from week 5.
 
-## Main libraries covered:
-- [matplotlib](https://matplotlib.org/3.3.1/index.html): low-level plotting
-- [altair](https://altair-viz.github.io/): high-level, grammar of graphics plotting
-- [pandas](https://pandas.pydata.org/): (2D) DataFrames (note that the [Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf) format has no problem storing N-dimensional data in a 2D table
-- [numpy](https://numpy.org/): N-dimensional arrays, core data science library
-- [sklearn](https://scikit-learn.org/stable/): simple library for sophisticated machine learning on nSamples x nFeatures matrices
-- [scipy](https://www.scipy.org/scipylib/index.html): stats, signal processing, ...
-- [PyTorch](https://pytorch.org/): high-performance tensor operations on CPU/GPU that facilitate Deep Learning
-
-## Other libraries referenced during session:
-- [xarray](http://xarray.pydata.org/en/stable/): labeled N-dimensional array (think ND DataFrame)
-- [seaborn](https://seaborn.pydata.org/): grammar of graphics (inspired) plotting built on matplotlib
-- [plotnine](https://plotnine.readthedocs.io/en/stable/about-plotnine.html): true grammar of graphics plotting built on matplotlib
-- [tensorflow](https://www.tensorflow.org/): most popular Deep Learning library from 2016-2018; [most new research is done in PyTorch](https://thegradient.pub/state-of-ml-frameworks-2019-pytorch-dominates-research-tensorflow-dominates-industry/)
-
-
-## misc topics:
-- Optional typing: a best-practice for improving documentation and future-proofing your python code. See [nice overview here](https://realpython.com/python-type-checking/)
-- quick overview on [managing jobs from shell](https://www.thegeekdiary.com/understanding-the-job-control-commands-in-linux-bg-fg-and-ctrlz/)
+### [Click Here for Week 4 Resources](cnjcx_week4_resources.md) :computer:
+**IYI** (**I**f **y**ou're **i**nterested) Tyler curated these links about his session. Thanks Tyler!
+- Learn more about matplotlib, pandas, sklearn, &ct...
+- Links to libraries that were referenced, but not covered. 
+- A linked tutorial on managing jobs from your shell.
+- Documenting best practices in python.
+---
+**Note**: these files are living documents and may be updated in the future. If you have suggestions, please contact us or fork and submit a pull request!
