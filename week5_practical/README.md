@@ -3,12 +3,12 @@
 
 **Session Leaders**: Tyler Benster
 
-### [Click Here for Week 4 Recap](cnjcx_week5_recap.md) :book:
+### [Click Here for Week 5 Recap](cnjcx_week5_recap.md) :book:
 - A reminder about _how to_ open [the notebook](cnjcx_week5_practical_python.ipynb) from week 5.
 
-### [Click Here for Week 4 Resources](cnjcx_week5_resources.md) :computer:
+### [Click Here for Week 5 Resources](cnjcx_week5_resources.md) :computer:
 **IYI** (**I**f **y**ou're **i**nterested) Tyler curated these links about his session. Thanks Tyler!
-- Learn more about matplotlib, pandas, sklearn, &ct...
+- Learn more about matplotlib, pandas, sklearn, & ...
 - Links to libraries that were referenced, but not covered. 
 - A linked tutorial on managing jobs from your shell.
 - Documenting best practices in python.
