@@ -4,7 +4,9 @@
 
 ### Week 1 Recap
 
-**Session Leaders**: Josh Melander, Eshed Margalit, and Tucker Fisher
+**Session Leaders**: Josh Melander, Eshed Margalit, and Tucker Fisher 
+
+Session Recording at [**CNJCx webpage**](https://stanford-cnjc.github.io/#/CNJCx) under the Week 1 session materials.
 
 ## Table of Contents
 
@@ -559,6 +561,7 @@ user interfaces (GUIs). Without a GUI, users must interact over the command line
 to take advantage of the remote compute power. One example is the [Sherlock
 cluster][sherlocklink] which allows users to run computationally expensive
 processes, including training deep neural networks.
+
 
 [sherlocklink]: https://www.sherlock.stanford.edu/docs/overview/introduction/
 [cnjcxlink]: https://stanford-cnjc.github.io/#/CNJCx
