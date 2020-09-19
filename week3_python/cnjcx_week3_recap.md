@@ -1,11 +1,13 @@
 # CNJCx: Practical Python
 ## Python Installations and Virtual Environments
 ### Week 3 Recap
-**Session Leaders**: Eshed Margalit and Julia Wang
 
 In this session, we practice using Python, creating virtual environments, and installing packages
 into virtual environments.
 
+**Session Leaders**: Eshed Margalit and Julia Wang
+
+Session Recording at [**CNJCx webpage**](https://stanford-cnjc.github.io/#/CNJCx) under the Week 3 session materials.
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)

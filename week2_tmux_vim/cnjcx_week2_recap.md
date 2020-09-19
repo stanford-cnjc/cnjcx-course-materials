@@ -6,15 +6,19 @@ In this session you are going to learn tools that will empower you further at
 the command line. These tools will be particularly valuable if/when you work on 
 machines that lack a **Graphical User Interface (GUI)**.
 
-In today's session we are going to use a command line text editor called **`vim`**. There are 
-many GUI based editors, also. [VS Code](https://code.visualstudio.com/), [Atom](https://atom.io/),
-and [Sublime](https://www.sublimetext.com/) are a few we've used in 
-the past. However when you are working on a remote machine, a command editor like 
-vim, emacs, or nano will be far more convenient. 
+In today's session we are going to use a command line text editor called
+**`vim`**. It is our choice because it has the best learning-curve:power ratio.
+There are many GUI based editors, also. [VS
+Code](https://code.visualstudio.com/), [Atom](https://atom.io/), and
+[Sublime](https://www.sublimetext.com/) are a few we've used in the past.
+However when you are working on a remote machine, a command editor like vim,
+emacs, or nano will be far more convenient. 
 
-**`vim`** is our choice because it has the best learning-curve:power ratio.
- 
+
 **Session Leaders**: Tucker Fisher
+
+Session Recording at [**CNJCx webpage**](https://stanford-cnjc.github.io/#/CNJCx) under the Week 2 session materials.
+
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)

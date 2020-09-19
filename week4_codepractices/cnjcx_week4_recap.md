@@ -2,10 +2,12 @@
 ## Git, GitHub, Clean Code, and Open Science
 ### Week 4 Recap
 
-**Session Leaders**: Russ Poldrack, Tucker Fisher, and Eshed Margalit
-
 In this session, we introduce the tools `git` and Github, discuss clean code best
 practices, and preview selected topics in open science.
+
+**Session Leaders**: Russ Poldrack, Tucker Fisher, and Eshed Margalit
+
+Session Recording at [**CNJCx webpage**](https://stanford-cnjc.github.io/#/CNJCx) under the Week 4 session materials.
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)

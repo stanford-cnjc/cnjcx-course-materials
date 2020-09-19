@@ -2,9 +2,11 @@
 ## The Eponym Session
 ### Week 5 Recap
 
+This week we learn how to perform data analysis, data munging, and more! The best way to learn this content is to check out the recording on the [CNJCx website][cnjcx_link], and follow along with [this week's notebook](cnjcx_week5_practical_python.ipynb).
+
 **Session Leaders**: Tyler Benster
 
-This week we learn how to perform data analysis, data munging, and more! The best way to learn this content is to check out the recording on the [CNJCx website][cnjcx_link], and follow along with [this week's notebook](cnjcx_week5_practical_python.ipynb).
+Session Recording at [**CNJCx webpage**](https://stanford-cnjc.github.io/#/CNJCx) under the Week 5 session materials.
 
 ## Preparation
 
