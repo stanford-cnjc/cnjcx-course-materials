@@ -508,6 +508,23 @@ download a couple files we wrote for you.
    ```bash
    $ sudo apt-get install vim
    ```
+7. Download **`git`** (if you don't already have it)
+
+   Finally, lets get git!
+   
+   **For MacOS**
+   
+   _note: the brew command comes from step 4_
+   
+   ```bash
+   $ brew install git
+   ```
+   
+   **For Unix and Windows Subsystem for Linux**
+   
+   ```bash
+   $ sudo apt-get install git-all
+   ```
 
 ### 2. Files from Josh-Eshed-Tucker (JET)
 
