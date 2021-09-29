@@ -200,6 +200,7 @@ The Jupyter notebook that Julia walked through in the second half of the session
 ## Preparation for Next Session: Version Control and Clean Code<a name="week4-prep"></a>
 
 ### CNJCx Week 4 Prerequisites
+#### Introducing yourself to **`git`**
 In Week 4, we're going to cover version control and collaboration tools: `git` and GitHub.
 In preparation, we ask that you perform two tasks:
 
