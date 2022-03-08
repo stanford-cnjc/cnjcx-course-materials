@@ -509,7 +509,7 @@ download a couple files we wrote for you.
    $ sudo apt-get install vim
    ```
    
-   #### Finally, lets get git!
+   #### Finally, lets get git! :octocat:
    
 7. Download **`git`** (if you don't already have it)
    
