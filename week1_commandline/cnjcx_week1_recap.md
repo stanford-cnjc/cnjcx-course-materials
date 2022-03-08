@@ -512,6 +512,12 @@ download a couple files we wrote for you.
 
    #### Finally, lets get git!
    
+   **Check if you have git**
+   
+   ```bash
+   $ git version # version info should appear if the terminal recognizes the command
+   ```
+   
    **For MacOS**
    
    _note: the brew command comes from step 4_
