@@ -510,7 +510,7 @@ download a couple files we wrote for you.
    ```
 7. Download **`git`** (if you don't already have it)
 
-   Finally, lets get git!
+   #### Finally, lets get git!
    
    **For MacOS**
    
