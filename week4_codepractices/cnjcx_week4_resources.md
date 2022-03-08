@@ -9,16 +9,13 @@
 1. [Interacting with a Remote (e.g. Github)](#remote)
 1. [Resources and Tips](#rnt)
 
-## Table of Commands<a name="tcm"></a>
-
 This table covers the commands we discussed in week_4, including useful flags and options. 
 
 Don't understand our conventions? Occasionally we refer to a `[placeholder]` (e.g. `git branch [branchname]` you would... `git branch thenameyouwant` or `echo $[variable]` you would... `echo $THEVARIABLEYOUWANT`.
 
+## Table of Git Commands<a name="tcm"/>
 | Command | Description | Common&nbsp;uses&nbsp;and&nbsp;flags |
 | :-: | --- | --- |
-| <code>echo&nbsp;$[variable]</code> | Often we wold like to know the value of a variable. Bash variables are accessed using the `$`. We use `echo` to place any variable into the standard output, making it readable (to us). |  `echo $HOME` places your "home" path to the standard output. |
-| <code>cd $\_</code> | The <code>\_</code> variable is constantly maintained by your shell as the "last input". | <code>mkdir&nbsp;&#8209;p&nbsp;/path/to/new_dir&nbsp;&&&nbsp;cd&nbsp;$\_</code> will drop you directly into the directory you just created with `mkdir -p`. |
 | <code>git &#8209;&#8209;help</code> | basic help from git. A nice way to remind yourself what command to use. | <code>git [command]&nbsp;&#8209;&#8209;help</code> will open the git manual (detailed help) for that particular command. For example: <code>git&nbsp;init&nbsp;&#8209;&#8209;help</code> will tell you all about `git init`. Press <kbd>q</kbd> to leave the manual page. We used `--help` to make this table. |
 | `git init` | Initialize an empty repository in the current directory. | You can also provide git init with a path, like <code>git&nbsp;init&nbsp;/path/to/dir</code> |
 | <code>git&nbsp;status</code> | Information about the current position in your version graph. | `git status` tells you your current branch, and lists your non-staged, non-committed and untracked files. |
@@ -36,6 +33,12 @@ Don't understand our conventions? Occasionally we refer to a `[placeholder]` (e.
 | <code>git&nbsp;clone</code> | Clone a remote repository onto your machine. | <code>git&nbsp;clone&nbsp;[repo_url]
 | <code>git&nbsp;pull&nbsp;&#8209;&#8209;rebase</code>  | After you have committed your local changes you can retrieve and incorporate changes from the remote. | <code>git&nbsp;pull</code> will initiate a merge,  its probably best to always <code>&#8209;&#8209;rebase</code>. If you happen to have multiple remotes for a project, you will have to specify <code>git&nbsp;pull&nbsp;&#8209;&#8209;rebase&nbsp;[remote]</code> |
 | `git push` | Incorporate your changes with the remote | As before, if you have multiple remotes you must specify <code>git&nbsp;push&nbsp;[remote]</code>. |
+
+ ## Bonus Bash
+| Command | Description | Common&nbsp;uses&nbsp;and&nbsp;flags |
+| :-: | --- | --- |
+| <code>echo&nbsp;$[variable]</code> | Often we wold like to know the value of a variable. Bash variables are accessed using the `$`. We use `echo` to place any variable into the standard output, making it readable (to us). |  `echo $HOME` places your "home" path to the standard output. |
+| <code>cd $\_</code> | The <code>\_</code> variable is constantly maintained by your shell as the "last input". | <code>mkdir&nbsp;&#8209;p&nbsp;/path/to/new_dir&nbsp;&&&nbsp;cd&nbsp;$\_</code> will drop you directly into the directory you just created with `mkdir -p`. |
 
 ## Resources and Tips<a name="rnt"></a>
 
