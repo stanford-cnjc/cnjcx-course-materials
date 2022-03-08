@@ -508,11 +508,12 @@ download a couple files we wrote for you.
    ```bash
    $ sudo apt-get install vim
    ```
-7. Download **`git`** (if you don't already have it)
-
+   
    #### Finally, lets get git!
    
-   **Check if you have git**
+7. Download **`git`** (if you don't already have it)
+   
+   Start by checking if you have git... don't download it again if you've got it.
    
    ```bash
    $ git version # version info should appear if the terminal recognizes the command
